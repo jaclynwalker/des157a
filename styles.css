@@ -1,9 +1,9 @@
 body {
     max-width: 1200px;
     margin: auto;
-    background: linear-gradient(135deg, #0E0317, #262262, #1F0A31, #4A008A);
+    background: linear-gradient(135deg, #1F0A31, #262262, #1F0A31, #4A008A, #E4BCFE);
     background-size: 400% 400%;
-	animation: gradient 7s ease infinite;
+	animation: gradient 10s ease infinite;
 }
 @keyframes gradient {
 	0% {
@@ -24,6 +24,13 @@ h1, h2, ul li a, footer a{
 h2 {
     font-size: 1.2em;
     line-height: 1em;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 1100px;
+    margin: auto;
 }
 /* header */
 header {
@@ -46,6 +53,10 @@ h1 {
     margin-left: auto;
     margin-right:auto;
     position: relative;
+    transition: 1.25s ease-in-out;
+}
+#banner:hover {
+    background-color: #262262;
 }
 #banner .moon {
     position: absolute;
@@ -55,71 +66,73 @@ h1 {
 }
 
 /* banner clouds */
-#banner #cloud1 {
+#banner #cloud1, #banner #cloud2, #banner #cloud3 {
     position: absolute;
-    left: 450px;
-    top: 100px;
     z-index: 2;
     transition: 1.25s ease-in-out;
+    cursor:pointer;
+}
+#banner #cloud1 {
+    left: 225px;
+    top: 135px;
 }
 #banner:hover > #cloud1{
-    left: 590px;
+    left: 25px;
     top: 125px;
 }
 #banner #cloud2 {
-    position: absolute;
-    left: 250px;
+    left: 450px;
     top: 50px;
-    z-index: 2;
-    transition: 1.25s ease-in-out;
 }
 #banner:hover > #cloud2{
-    left: 100px;
+    left: 650px;
+    top: 30px;
+}
+#banner #cloud3 {
+    left: 400px;
+    top: 50px;
+}
+#banner:hover > #cloud3 {
+    left: 300px;
     top: 30px;
 }
 /* banner stars */
-#banner #star1 {
+#banner #star1, #banner #star2, #banner #star3, #banner #star4, #banner #star5, #banner #star6, #banner #star7, #banner #star8, #banner #star9 {
     position: absolute;
+}
+#banner #star1 {
     left: 75px;
     top: 175px;
 }
 #banner #star2 {
-    position: absolute;
     left: 150px;
     top: 50px;
 }
 #banner #star3 {
-    position: absolute;
     left: 250px;
     top: 150px;
 }
 #banner #star4 {
-    position: absolute;
     left: 350px;
     top: 75px;
 }
 #banner #star5 {
-    position: absolute;
     left: 550px;
     top: 50px;
 }
 #banner #star6 {
-    position: absolute;
     left: 725px;
     top: 175px;
 }
 #banner #star7 {
-    position: absolute;
     left: 800px;
     top: 75px;
 }
 #banner #star8 {
-    position: absolute;
     left: 925px;
     top: 175px;
 }
 #banner #star9 {
-    position: absolute;
     left: 1000px;
     top: 75px;
 }
@@ -136,7 +149,8 @@ main {
 main section {
     border: 5px solid #E4BCFE;
     border-radius: 10px;
-    padding: 25px;
+    /* padding: top, right, bottom, left */
+    padding: 15px 25px 10px 25px;
     width: 250px;
     transition: 0.5s ease-in-out;
     background-color: #1F0A31;
@@ -150,7 +164,7 @@ ul li {
 }
 ul li a {
     text-decoration: none;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1.5em;
     transition: 0.3s ease-in-out;
 }
@@ -160,8 +174,8 @@ ul li a:hover {
 /* footer */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 10px;
 }
 footer a {
-    font-weight: 200;
+    font-weight: 300;
 }
