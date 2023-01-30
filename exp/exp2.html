@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+
+    <style>
+        h1, p {
+            text-align: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+<header>
+    <h1>Experiment 2</h1>
+</header>
+<body>
+    <div>
+        <p></p>
+    </div>
+
+    <script>
+    // The user is propted to choose a color from the list. The background color is changed to the user's selected color. If the user does not pick a color in the list, the background turns black.
+    
+    function pickBackgroundColor(){
+        var color = prompt("Choose your favorite color: red, orange, yellow, green, blue, or purple.", "");
+        var lowercaseColor = color.toLowerCase();
+        return lowercaseColor;
+    }
+    function wrongColor()
+    {
+        var color = prompt("You did not choose a color from the list. Please choose red, orange, yellow, green, blue, or purple.", "");
+        var lowercaseColor = color.toLowerCase();
+        return lowercaseColor;
+    }
+    function changeBackgroundColor(color){
+         var myTag = document.createElement('p');
+
+        var colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+        for (var i =0; i<colorList.length; i++)
+        {
+            if (color === colorList[i]){
+                document.body.style.backgroundColor = colorList[i];
+                
+                var mySentence = document.createTextNode(`You picked ${colorList[i]}!`);
+                break;
+            }
+            else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                var mySentence = document.createTextNode('You did not pick a color from the list!');
+            }
+        }
+        myTag.appendChild(mySentence);
+        var myDiv = document.querySelector('div');
+        myDiv.appendChild(myTag);
+    }
+    changeBackgroundColor(pickBackgroundColor());
+
+    </script>
+</body>
+</html>
