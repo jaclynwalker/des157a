@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs</title>
+
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+<!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet"> 
+<!-- style sheet -->
+    <link href="styles.css" rel="stylesheet">
+<!-- JavaScript -->
+    <script src="script.js" defer></script> 
+    
+</head>
+<body>
+    <main>
+    <section id="input">
+    <div id="divTitle">
+        <h1>A Day At The Beach</h1>
+        <h2>Fill in the blanks to play!</h2>
+    </div> 
+    <form>
+        <label for="adj1">Adjective</label>
+        <input type="text" style='width:250px; height:30px' name="adj1" id="adjective1" required>
+        
+        <label for="n1">Noun</label>
+        <input type="text" style='width:250px; height:30px' name="n1" id="noun1" required>
+
+        <label for="v1">Verb</label>
+        <input type="text" style='width:250px; height:30px' name="v1" id="verb1" required>
+
+        <label for="v2">Verb</label>
+        <input type="text" style='width:250px; height:30px' name="v2" id="verb2" required>
+
+        <label for="f1">Animal; plural</label>
+        <input type="text" style='width:250px; height:30px' name="a1" id="animal1" required>
+
+        <label for="adj2">Adjective</label>
+        <input type="text" style='width:250px; height:30px' name="adj2" id="adjective2" required>
+
+        <button id="submit">Submit</button>
+    </form>
+    </section>
+
+    <section id="output">
+        <h1>A Day At The Beach</h1>
+        <p>It's time for a <strong>ADJECTIVE</strong> day at the beach! Make sure you pack your favorite <strong>NOUN</strong> to protect you from the sun. The beach is the perfect time to <strong>VERB</strong> in the san. You can also <strong>VERB</strong> in the water, just watch out for wild <strong>ANIMALS</strong>. The beach is so <strong>ADJECTIVE</strong>!</p>
+
+        <button id="playAgain">Play Again</button>
+    </section>
+    </main>
+</body>
+</html>

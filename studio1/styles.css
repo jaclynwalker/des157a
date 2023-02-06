@@ -1,0 +1,86 @@
+body{
+    font-family: 'Itim', cursive;
+    color: #444CA0;
+    background-image: url("images/beach.png");
+    background-size: 110%;
+}
+h1 {
+    font-family: 'Itim', cursive;
+    font-size: 50px;
+}
+h2 {
+    font-size: 25px;
+    margin-top: 0px;
+    padding:0;
+}
+#input {
+    display: flex;
+    gap: 100px;
+    margin-top: 40px;
+    justify-content: center;
+    /* display: none; */
+}
+#divTitle {
+    text-align: center;
+}
+#input h1 {
+    /* margin: top right bottom left */
+    margin: 25px auto 25px 25px;
+}
+form {
+    border: 5px solid #444CA0;
+    border-radius: 20px;
+    /* padding: top right bottom left */
+    padding: 30px 45px 45px 45px;
+    position: relative;
+    background-color: #D0EDF4;
+}
+input, label {
+    display: block;
+    margin-bottom: .25em;
+}
+input {
+    margin-bottom: 1.1em;
+    border: 3px solid #444CA0;
+    border-radius: 7px;
+}
+button {
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #444CA0;
+    border-radius: 7px;
+    background-color: #444CA0;
+    color: white;
+}
+#submit {
+    position: absolute;
+    left: 142px;
+}
+#output {
+    /* display: none; */
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    display: block;
+    background-color: #D0EDF4;
+    border: 5px solid #444CA0;
+    border-radius: 20px;
+    width: 600px;
+    /* margin: top right bottom left */
+    margin: 100px auto auto auto;
+    /* padding: top right bottom left */
+    padding: 25px 35px 50px 35px;
+    position: relative;
+}
+#output h1 {
+    text-align: center;
+}
+#output p {
+    line-height: 1.5em;
+    font-size: 25px;
+}
+#output p strong {
+    font-family: 'Itim', cursive;
+}
+#playAgain {
+    position: absolute;
+    right: 50px;
+}
