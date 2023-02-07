@@ -20,15 +20,15 @@
     <link href="styles.css" rel="stylesheet">
 <!-- JavaScript -->
     <script src="script.js" defer></script> 
-    
 </head>
 <body>
     <main>
-    <section id="input">
+    <section id="input" class="showing">
     <div id="divTitle">
         <h1>A Day At The Beach</h1>
-        <h2>Fill in the blanks to play!</h2>
     </div> 
+    <div id="madlibsInput">
+        <h2>Fill in the blanks to play!</h2>
     <form>
         <label for="adj1">Adjective</label>
         <input type="text" style='width:250px; height:30px' name="adjective1" id="adj1" required>
@@ -50,9 +50,10 @@
 
         <button id="submit">Submit</button>
     </form>
+    </div>
     </section>
 
-    <section id="output">
+    <section id="output" class="hidden">
         <h1>A Day At The Beach</h1>
         <p>It's time for a <strong>ADJECTIVE</strong> day at the beach! Make sure you pack your favorite <strong>NOUN</strong> to protect you from the sun. The beach is the perfect time to <strong>VERB</strong> in the san. You can also <strong>VERB</strong> in the water, just watch out for wild <strong>ANIMALS</strong>. The beach is so <strong>ADJECTIVE</strong>!</p>
 
