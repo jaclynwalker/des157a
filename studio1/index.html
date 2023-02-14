@@ -22,43 +22,49 @@
     <script src="script.js" defer></script> 
 </head>
 <body>
+
+    <div id='background'>
+        <img src="images/beach.svg" alt="beach" width="1200" height="750">
     <main>
     <section id="input" class="showing">
-    <div id="divTitle">
-        <h1>A Day At The Beach</h1>
-    </div> 
-    <div id="madlibsInput">
-        <h2>Fill in the blanks to play!</h2>
-    <form>
-        <label for="adj1">Adjective</label>
-        <input type="text" style='width:250px; height:30px' name="adjective1" id="adj1" required>
-        
-        <label for="n1">Noun</label>
-        <input type="text" style='width:250px; height:30px' name="noun1" id="n1" required>
+        <header>
+            <img src="images/title-madlibs.svg" alt="title" width="400" height="191">
+        </header>
+    
+        <div id="madlibsInput">
+            <h2>Fill in the blanks to play!</h2>
+            <p id="warning"></p>
+            <form>
+                <label for="adj1">Adjective</label>
+                <input type="text"  name="adj1" id="adj1" required>
+                
+                <label for="n1">Noun</label>
+                <input type="text"  name="n1" id="n1" required>
 
-        <label for="v1">Verb</label>
-        <input type="text" style='width:250px; height:30px' name="verb1" id="v1" required>
+                <label for="v1">Verb</label>
+                <input type="text"  name="v1" id="v1" required>
 
-        <label for="v2">Verb</label>
-        <input type="text" style='width:250px; height:30px' name="verb2" id="v2" required>
+                <label for="v2">Verb</label>
+                <input type="text"  name="v2" id="v2" required>
 
-        <label for="a1">Animal; plural</label>
-        <input type="text" style='width:250px; height:30px' name="animal1" id="a1" required>
+                <label for="a1">Animal (plural)</label>
+                <input type="text"  name="a1" id="a1" required>
 
-        <label for="adj2">Adjective</label>
-        <input type="text" style='width:250px; height:30px' name="adjective2" id="adj2" required>
+                <label for="adj2">Adjective</label>
+                <input type="text"  name="adj2" id="adj2" required>
 
-        <button id="submit">Submit</button>
-    </form>
-    </div>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
     </section>
-
+    
     <section id="output" class="hidden">
         <h1>A Day At The Beach</h1>
-        <p>It's time for a <strong>ADJECTIVE</strong> day at the beach! Make sure you pack your favorite <strong>NOUN</strong> to protect you from the sun. The beach is the perfect time to <strong>VERB</strong> in the san. You can also <strong>VERB</strong> in the water, just watch out for wild <strong>ANIMALS</strong>. The beach is so <strong>ADJECTIVE</strong>!</p>
+        <p>It's time for a <span id="input1"></span> day at the beach! Make sure you pack your favorite <span id="input2"></span> to protect you from the sun. The beach is the perfect time to <span id="input3"></span> in the sand. You can also <span id="input4"></span> in the water, just watch out for wild <span id="input5"></span> swimming around. The beach is so <span id="input6"></span>!</p>
 
         <button id="playAgain">Play Again</button>
     </section>
     </main>
+</div>
 </body>
 </html>
