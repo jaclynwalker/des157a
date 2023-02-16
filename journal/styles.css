@@ -1,5 +1,6 @@
 body {
     background-color: #F5EDFF;
+    font-family: poppins, sans-serif;
 }
 article {
     max-width: 800px;
@@ -20,13 +21,11 @@ header {
 h1 {
     font-size: 36px;
 }
-h1, h2, date {
-    font-family: poppins, sans-serif;
+h1, h2 {
     font-weight: 800;
     color: #2B0064;
 }
 p {
-    font-family: poppins, sans-serif;
     font-weight: 300;
     line-height: 1.3em;
 }
@@ -42,6 +41,22 @@ p a {
     color: transparent;
     margin: auto;
     padding-left: 10px;
+}
+#journal4imgs {
+    display: flex;
+    gap: 10px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid rgb(182,139,239);
+}
+figcaption {
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: #2B0064;
 }
 footer {
     background: rgb(182,139,239);
