@@ -8,6 +8,9 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    height: auto;
+
 }
 header img {
     max-width: 400px;
