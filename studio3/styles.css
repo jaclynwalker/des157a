@@ -1,0 +1,109 @@
+body {
+    font-family: Arial;
+    color: #333;
+    padding: 50px;
+    line-height: 1.5em;
+    background: rgb(248,206,255);
+    background: linear-gradient(333deg, rgba(248,206,255,1) 0%, rgba(255,244,249,1) 50%, rgba(248,206,255,1) 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+}
+button { 
+    padding: 15px;
+    border: 4px solid #9351A0;
+    border-radius: 10px;
+    background-color: #FCDEEB;
+    color: #9351A0;
+    transition: .25s ease-in-out;
+}
+button:hover {
+    background-color: #9351A0;
+    color: #FCDEEB;
+}
+p {
+    text-align: center;
+}
+#instructions p {
+    text-align: left;
+    margin: auto;
+    margin: 25px;
+}
+h1, h2 {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 800;
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+    background-image: linear-gradient(60deg, #B68BEF, #9351A0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 15px;
+    margin: auto;
+    width: 300px;
+    text-align: center;
+}
+#playxwins {
+    text-align: center;
+    font-size: 48px;
+    background-image: linear-gradient(60deg, #B68BEF, #9351A0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 25px;
+    margin: 0;
+}
+#gamecontrol {
+    text-align: center;
+}
+#game {
+    text-align: center;
+}
+#actions {
+    text-align: center;
+    padding: 10px;
+}
+#score {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+}
+#scoretitle {
+    font-weight: 800;
+    font-size: 24px;
+}
+.playerscore{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.playerscorecard {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 5px solid #9351A0;
+    border-radius: 10px;
+}
+.points {
+    font-weight: 800;
+    font-size: 48px;
+    margin: 20px;
+    color: #9351A0;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+#rollorpass{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+#rollorpass button {
+    width: 150px;
+}
