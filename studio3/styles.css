@@ -26,11 +26,6 @@ button:hover {
 p {
     text-align: center;
 }
-#instructions p {
-    text-align: left;
-    margin: auto;
-    margin: 25px;
-}
 h1, h2 {
     font-family: 'Mukta', sans-serif;
     font-weight: 800;
