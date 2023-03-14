@@ -1,13 +1,18 @@
 body {
+    /* from glenda: box-sizing: border-box calculates the padding and borders within the calculation for the element. It eliminates some unnecessary scroll in your design since there were horizontal and vertical scrolls that were just for the padding (there was no additional content to see on the scroll). */
+    box-sizing:border-box;
+    /* from glenda: set the viewport to 100vh (vh = viewport height) so that the background does not repeat */
+    height:100vh;
     font-family: Arial;
     color: #333;
     padding: 50px;
     line-height: 1.5em;
     background: rgb(248,206,255);
     background: linear-gradient(333deg, rgba(248,206,255,1) 0%, rgba(255,244,249,1) 50%, rgba(248,206,255,1) 100%);
-    background-size: 100% 100%;
+    /* the following three declarations are not needed */
+    /* background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
     font-family: 'Mukta', sans-serif;
     font-weight: 300;
 }
