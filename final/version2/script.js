@@ -2,6 +2,8 @@
     'use strict'
     console.log('reading js')
 
+    alert('Welcome! \n 1) View all 5 overlays. \n 2) Find 3 photo locations. \n 3) View 2 slideshows.');
+
     // create a variable for each overlay
     const backyard = document.querySelector('#backyard');
     const beach = document.querySelector('#beach');
