@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Picture</title>
+
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script> 
+
+</head>
+<body id="myPage">
+    <header>
+        <h1>Where is Bella?</h1>
+    </header>
+        <h3>Click on Bella to explore!</h3>
+
+    <div id="container">
+        <div id="backyardcrop"><img src="images/bella-backyard-CROP.png" alt="backyardcrop" width="225"></div>
+        <div id="beachcrop"><img src="images/bella-beach-CROP.png" alt="beachcrop" width="125"></div>
+        <div id="walkcrop"><img src="images/bella-walk-CROP.png" alt="walkcrop" width="150"></div>
+        <div id="beanbagcrop"><img src="images/bella-beanbag-CROP.png" alt="beanbagcrop" width="175"></div>
+        <div id="kitchencrop"><img src="images/bella-kitchen-CROP.png" alt="kitchencrop" width="200"></div>
+    </div>
+
+    <div id="backyard" class="hidden">
+        <div class="overlay">
+            <div id="backyardoverlay">
+                <img src="images/bella-backyard-FULL.jpg" class="overlayimg"  alt="backyard" width="300">
+                <img src="images/tag.png" class="tag" id="backyardtag" alt="tag" width="25">
+                <div id="backyardtagtext" class="hidden">
+                <p class="tagtext">Carmel Valley, CA</p>
+            </div>
+        </div>
+        <div class="overlayContent">
+            <h2>Bella is in the backyard!</h2>
+            <p>Bella is laying in the grass outside! The backyard is her favorite place to sunbathe and take a long nap.</p>
+            <button class="return">Back to Map</button></div>
+        </div>
+    </div>
+
+    <div id="beach" class="hidden">
+        <div class="overlay">
+            <div class=slideshow>
+                <img src="images/bella-beach-FULL.jpg" class="overlayimg" id="beach-slideshow" alt="beach" width="300">
+                <p class="links"><a href="#" id="beachprevious" class="previous">previous</a><a href="#" id="beachnext" class="next">next</a></p>
+            </div>
+            <div class="overlayContent">
+                <h2>Bella is at the beach!</h2>
+                <p>Bella loves to spend time outside at the beach. She enjoys smelling new smells, relaxing in the sand, and sunbathing. </p>
+                <button>Back to Map</button></div>
+        </div>
+    </div>
+
+    <div id="beanbag" class="hidden">
+        <div class="overlay">
+            <div id="beanbagoverlay">
+                <img src="images/bella-beanbag-FULL.jpg" class="overlayimg" alt="beanbag" width="300">
+                <img src="images/tag.png" class="tag" id="beanbagtag" alt="tag" width="25">
+                <div id="beanbagtagtext" class="hidden">
+                <p class="tagtext">Pacific Beach, CA</p>
+                </div>
+            </div>
+            <div class="overlayContent">
+                <h2>Bella is on the beanbag!</h2>
+                <p>A beanbag is Bella's favorite place to lay down indoors. This beanbag is located at my sisters home.</p>
+                <button>Back to Map</button></div>
+        </div>
+    </div>
+
+    <div id="kitchen" class="hidden">
+        <div class="overlay">
+            <div class="slideshow">
+                <img src="images/bella-kitchen-FULL.jpeg" class="overlayimg" id="kitchen-slideshow" alt="kitchen" width="300">
+                <div class="buttons">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+                <p class="links"><a href="#" id="kitchenprevious" class="previous">previous</a><a href="#" id="kitchennext" class="next">next</a></p>
+            </div>
+            <div class="overlayContent">
+                <h2>Bella is in the kitchen!</h2>
+                <p>Bella's favorite place to be is the kitchen. She loves to hang out and wait for the possibility of food. Her favorite meal of the day is dinner.</p>
+                <button>Back to Map</button></div>
+        </div>
+    </div>
+
+    <div id="walk" class="hidden">
+        <div class="overlay">
+            <div id="walkoverlay">
+                <img src="images/bella-walk-FULL.jpg" class="overlayimg" alt="walk" width="300">
+                <img src="images/tag.png" class="tag" id="walktag" alt="tag" width="25">
+                <div id="walktagtext" class="hidden">
+                <p class="tagtext">San Diego, CA</p>
+                </div>
+            </div>
+            <div class="overlayContent">
+                <h2>Bella is on a walk!</h2>
+                <p>Bella loves to go on walks every morning and evening. Her favorite walk to take is through a small canyon, with lots of different bushes and trees to sniff.</p>
+                <button>Back to Map</button></div>
+        </div>
+    </div>
+
+
+</body>
+</html>
