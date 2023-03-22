@@ -25,33 +25,7 @@
             backyardtagtext.className = "hidden";
         })
     });
-    document.querySelector('#beachcrop').addEventListener('click', function(event){
-        event.preventDefault();
-        beach.className = 'showing';
-        //create slideshow
-        const myImages = ['bella-beach-FULL.jpg', 'bella-beach-FULL2.jpg', 'bella-beach-FULL3.jpg'];
-        let currentImage = 0; //starting image index 0
-        const slide = document.getElementById('beach-slideshow'); 
-        //when next button is clicked
-        document.querySelector('#beachnext').addEventListener('click', nextPhoto);
-        function nextPhoto(){
-            currentImage++; //add one to current image index
-            if (currentImage > myImages.length-1){
-                currentImage = 0;
-            }
-            slide.src = `images/${myImages[currentImage]}`;
-        }
-        // when previous button is clicked
-        document.querySelector('#beachprevious').addEventListener('click', previousPhoto);
-        function previousPhoto(){
-            currentImage--; //remove one from current image index
-            if (currentImage < 0){
-                currentImage = myImages.length-1;
-            }
-            slide.src = `images/${myImages[currentImage]}`;
-        }
-        
-    });
+    
     document.querySelector('#beanbagcrop').addEventListener('click', function(event){
         event.preventDefault();
         beanbag.className = 'showing';
@@ -65,6 +39,69 @@
             beanbagtagtext.className = "hidden";
         })
     });
+    document.querySelector('#beachcrop').addEventListener('click', function(event){
+        event.preventDefault();
+        beach.className = 'showing';
+        //create slideshow
+        const myImages = ['bella-beach-FULL.jpg', 'bella-beach-FULL2.jpg', 'bella-beach-FULL3.jpg'];
+        let currentImage = 0; //starting image index 0
+        const slide = document.getElementById('beach-slideshow'); 
+        //slider dots
+        const beachdot1 = document.querySelector('#beachdot1');
+        const beachdot2 = document.querySelector('#beachdot2');
+        const beachdot3 = document.querySelector('#beachdot3');
+        //when next button is clicked
+        document.querySelector('#beachnext').addEventListener('click', nextPhoto);
+        function nextPhoto(){
+            currentImage++; //add one to current image index
+            changeBeachDotColor(currentImage, beachdot1, beachdot2, beachdot3);
+            if (currentImage > myImages.length-1){
+                currentImage = 0;
+                beachdot1.style.backgroundColor='#5c3974';
+                beachdot2.style.backgroundColor='#F2E1FF';
+                beachdot3.style.backgroundColor = '#F2E1FF';
+            }
+            else if (currentImage == 0){
+                beachdot1.style.backgroundColor='#5c3974';
+                beachdot2.style.backgroundColor='#F2E1FF';
+                beachdot3.style.backgroundColor = '#F2E1FF';
+            }
+            slide.src = `images/${myImages[currentImage]}`;
+        }
+        //function to change slider dot colors
+        function changeBeachDotColor (currentImage, beachdot1, beachdot2, beachdot3){
+            if (currentImage > 0){
+                if (currentImage==1){ //if the slide is the first index
+                    beachdot1.style.backgroundColor='#F2E1FF';
+                    beachdot2.style.backgroundColor='#5c3974';
+                    beachdot3.style.backgroundColor = '#F2E1FF';
+                }
+                else if (currentImage==2){ //the the slide is the 2 index
+                    beachdot1.style.backgroundColor='#F2E1FF';
+                    beachdot2.style.backgroundColor='#F2E1FF';
+                    beachdot3.style.backgroundColor='#5c3974';
+                }
+            }
+        }
+        // when previous button is clicked
+        document.querySelector('#beachprevious').addEventListener('click', previousPhoto);
+        function previousPhoto(){
+            currentImage--; //remove one from current image index
+            changeBeachDotColor(currentImage, beachdot1, beachdot2, beachdot3);
+            if (currentImage < 0){
+                currentImage = myImages.length-1;
+                beachdot1.style.backgroundColor='#F2E1FF';
+                beachdot2.style.backgroundColor='#F2E1FF';
+                beachdot3.style.backgroundColor='#5c3974';
+            }
+            if (currentImage == 0){
+                beachdot1.style.backgroundColor='#5c3974';
+                beachdot2.style.backgroundColor='#F2E1FF';
+                beachdot3.style.backgroundColor = '#F2E1FF';
+            }
+            slide.src = `images/${myImages[currentImage]}`;
+        }
+    });
     document.querySelector('#kitchencrop').addEventListener('click', function(event){
         event.preventDefault();
         kitchen.className = 'showing';
@@ -72,21 +109,58 @@
         const myKitchenImages = ['bella-kitchen-FULL.jpeg', 'bella-kitchen-FULL2.jpeg', 'bella-kitchen-FULL3.jpeg'];
         let currentImage = 0; //starting image index 0
         const slide = document.getElementById('kitchen-slideshow'); 
-        //when button is clicked
+        //slider dots
+        const beachdot1 = document.querySelector('#kitchendot1');
+        const beachdot2 = document.querySelector('#kitchendot2');
+        const beachdot3 = document.querySelector('#kitchendot3');
+        //when next button is clicked
         document.querySelector('#kitchennext').addEventListener('click', nextPhoto);
         function nextPhoto(){
             currentImage++; //add one to current image index
+            changeKitchenDotColor(currentImage, beachdot1, beachdot2, beachdot3);
             if (currentImage > myKitchenImages.length-1){
                 currentImage = 0;
+                kitchendot1.style.backgroundColor='#5c3974';
+                kitchendot2.style.backgroundColor='#F2E1FF';
+                kitchendot3.style.backgroundColor = '#F2E1FF';
+            }
+            else if (currentImage == 0){
+                beachdot1.style.backgroundColor='#5c3974';
+                beachdot2.style.backgroundColor='#F2E1FF';
+                beachdot3.style.backgroundColor = '#F2E1FF';
             }
             slide.src = `images/${myKitchenImages[currentImage]}`;
+        }
+        //function to change slider dot colors
+        function changeKitchenDotColor (currentImage, beachdot1, beachdot2, beachdot3){
+            if (currentImage > 0){
+                if (currentImage==1){ //if the slide is the first index
+                    kitchendot1.style.backgroundColor='#F2E1FF';
+                    kitchendot2.style.backgroundColor='#5c3974';
+                    kitchendot3.style.backgroundColor = '#F2E1FF';
+                }
+                else if (currentImage==2){ //the the slide is the 2 index
+                    kitchendot1.style.backgroundColor='#F2E1FF';
+                    kitchendot2.style.backgroundColor='#F2E1FF';
+                    kitchendot3.style.backgroundColor='#5c3974';
+                }
+            }
         }
         // when previous button is clicked
         document.querySelector('#kitchenprevious').addEventListener('click', previousPhoto);
         function previousPhoto(){
             currentImage--; //remove one from current image index
+            changeKitchenDotColor(currentImage, kitchendot1, kitchendot2, kitchendot3);
             if (currentImage < 0){
                 currentImage = myKitchenImages.length-1;
+                kitchendot1.style.backgroundColor='#F2E1FF';
+                kitchendot2.style.backgroundColor='#F2E1FF';
+                kitchendot3.style.backgroundColor='#5c3974';
+            }
+            if (currentImage == 0){
+                kitchendot1.style.backgroundColor='#5c3974';
+                kitchendot2.style.backgroundColor='#F2E1FF';
+                kitchendot3.style.backgroundColor = '#F2E1FF';
             }
             slide.src = `images/${myKitchenImages[currentImage]}`;
         }
